@@ -26,7 +26,7 @@ export interface PostProps {
 
 
 // interfaces/index.ts
-
+ ["address"]
 export interface UserProps {
   id: number;
   name: string;
