@@ -23,3 +23,16 @@ export interface PostProps {
   userId: number;
   id?: number; // optional, in case you want to store post ID
 }
+
+
+// interfaces/index.ts
+
+export interface UserProps {
+  id: number;
+  name: string;
+  email: string;
+  username?: string; // optional
+  avatarUrl?: string; // optional
+  createdAt?: string; // optional, ISO date string
+}
+
