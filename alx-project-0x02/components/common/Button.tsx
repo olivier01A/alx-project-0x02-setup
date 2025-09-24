@@ -1,9 +1,10 @@
 ["import { type ButtonProps }"]
 
+
 // components/common/Button.tsx
 import React from "react";
 import clsx from "clsx";
-
+import { type ButtonProps } from "@/interfaces";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "small" | "medium" | "large";
   shape?: "rounded-sm" | "rounded-md" | "rounded-full";
