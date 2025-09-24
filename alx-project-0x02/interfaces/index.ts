@@ -13,3 +13,13 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset";
   className?: string;
 }
+
+
+// interfaces/index.ts
+
+export interface PostProps {
+  title: string;
+  content: string;
+  userId: number;
+  id?: number; // optional, in case you want to store post ID
+}
