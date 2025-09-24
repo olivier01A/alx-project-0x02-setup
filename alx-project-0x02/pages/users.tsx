@@ -32,3 +32,47 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default UsersPage;
+
+
+
+// pages/posts.tsx
+import { GetStaticProps } from "next";
+
+interface Post {
+  id: number;
+  title: string;
+  body: string;
+}
+
+interface PostsPageProps {
+  posts: Post[];
+}
+
+export const getStaticProps: GetStaticProps<PostsPageProps> = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts: Post[] = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+    // Optional: re-generate page every 60 seconds
+    revalidate: 60,
+  };
+};
+
+const PostsPage = ({ posts }: PostsPageProps) => {
+  return (
+    <div>
+      <h1>Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default PostsPage;
+
