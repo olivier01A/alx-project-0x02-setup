@@ -36,6 +36,7 @@ export default UsersPage;
 
 
 // pages/posts.tsx
+["getStaticProps()"]
 import { GetStaticProps } from "next";
 
 interface Post {
