@@ -1,3 +1,5 @@
+["import { type CardProps }"]
+
 // components/common/Card.tsx
 import React from "react";
 
